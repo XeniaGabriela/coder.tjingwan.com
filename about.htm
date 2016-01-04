@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="indexApp">
+
+  <head>
+		
+    <title>Coding Services | Xenia Bogomolec </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Why and how I became a mathematician and what I have learned from it."/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/indexModule.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleSheets/style.css" />
+	  
+  </head>
+	  
+
+  <body ng-controller="indexCtrl">
+
+  	<div id="header">
+			<a href="index.htm">
+			</a>
+		</div>
+
+  	<div id="linkListBackground"></div>
+	    
+	<div class="linkList">
+	    <div class="link">
+		   <a title="{{chosenLanguage.links.homeTitle}}" 
+		   		href="{{homeLink}}"> 
+		   		{{chosenLanguage.links.home}}  
+		   </a>
+		</div>
+		<div class="link">
+	    	<a href="about.htm" title="{{chosenLanguage.links.aboutTitle}}" class="activeLink"> 
+	    		{{chosenLanguage.links.about}}  
+	   	    </a>
+	    </div>
+	    <div class="link">
+	   	   <a href="{{chosenLanguage.links.projectLink}}" title=""> 	
+	   	   		{{chosenLanguage.links.projects}}  
+	   	   </a>
+	   	</div>
+	    <div class="link">
+	   	   <a href="impressum.htm" title=""> 	
+	   	   		{{chosenLanguage.links.impressum}}  
+	   	   </a>
+	   	</div>
+	</div>
+
+	<div id="languageButtonBackground">
+		<a href="indexEn.htm">{{switchLanguage}}</a>
+	</div>
+			
+	<div id="languageButton" ng-click="changeLanguage()">
+		<a href="">{{switchLanguage}}</a>
+	</div>
+			
+	   		
+	<div class="centered">
+		<div id="aboutBackground">
+
+			<german-about ng-show="switchLanguage=='English'"></german-about>
+			<english-about ng-show="switchLanguage=='Deutsch'"></english-about>
+
+		<div id="aboutText">
+			<h2 class="aboutLinkTitle">{{chosenLanguage.titles.profiles}} </h2>
+			<a href="https://www.xing.com/profile/Xenia_Bogomolec">Xing</a><br> 
+			<a href="https://de.linkedin.com/in/xenia-bogomolec-532981a6">LinkedIn</a><br>
+			<a href="https://plus.google.com/u/0/101718688147481016396">Google+</a><br>
+			<a href="https://github.com/XeniaGabriela">Github</a>
+			(Die großen Industrieprojekte sind dort natürlich nicht öffentlich einsehbar)
+
+			<h2 class="aboutLinkTitle">{{chosenLanguage.titles.articles}} </h2>
+			<a href="https://www.linkedin.com/pulse/security-responsibility-freelancing-programmer-xenia-bogomolec?trk=mp-reader-card">Security Responsibility as a Freelancing Programmer</a><br> 
+			<a href="https://www.linkedin.com/pulse/explanatory-power-children-how-protected-law-xenia-bogomolec?trk=mp-reader-card">The explanatory power of children and how they are (not) protected by law</a>
+			</div>
+		</div>
+	</div>
+	
+  </body>
+
+</html>
+

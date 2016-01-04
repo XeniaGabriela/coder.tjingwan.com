@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="indexApp" charset="utf-8">
+
+  	<head>
+		
+	    <title> Software-Entwicklung | Programmierung | Informations-Sicherheit</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <meta name="description" content="Profil und Kontaktseite der freiberuflichen Programmiererin und Diplom-Mathematikerin Xenia Bogomolec."/>
+	    <meta name="robots" content="index,follow"/>
+    	<meta name="viewport" content="width=device-width">
+	    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	    <script type="text/javascript" src="js/angular.min.js"></script>
+	    <script type="text/javascript" src="js/indexModule.js"></script>
+	    <link rel="stylesheet" media="all" type="text/css" href="styleSheets/style.css" />
+	  
+  	</head>
+	  
+
+  	<body ng-controller="indexCtrl" class="index">
+
+	  	<div id="header">
+			<a href="index.htm">
+			</a>
+		</div>
+	    
+	    <div id="linkListBackground"></div>
+
+		<div class="linkList">
+		    <div class="link">
+			   <a href="index.htm" title="{{chosenLanguage.links.homeTitle}}" class="activeLink"> 
+			   		{{chosenLanguage.links.home}} 
+			   </a>
+			</div>
+			<div class="link">
+		    	<a href="about.htm" title="{{chosenLanguage.links.aboutTitle}}"> 
+		    		{{chosenLanguage.links.about}} 
+		   	    </a>
+		    </div>
+		    <div class="link">
+		   	   <a href="{{chosenLanguage.links.projectLink}}" title=""> 	
+		   	   		{{chosenLanguage.links.projects}}  
+		   	   </a>
+		   	</div>
+		   	<div class="link">
+		   	   <a href="impressum.htm" title=""> 	
+		   	   		{{chosenLanguage.links.impressum}}  
+		   	   </a>
+		   	</div>
+		</div>
+
+
+		<div id="languageButtonBackground">
+			<a href="indexEn.htm">{{switchLanguage}}</a>
+		</div>
+
+		<div id="languageButton">
+			<a href="indexEn.htm">{{switchLanguage}}</a>
+		</div>
+			
+			
+		   		
+		<div class="centered">
+
+			<german-abstract ng-show="switchLanguage=='English'"></german-abstract>
+			<english-abstract ng-show="switchLanguage=='Deutsch'"></english-abstract>
+
+		</div>
+	
+  </body>
+
+</html>
+

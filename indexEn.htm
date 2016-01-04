@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="indexApp" charset="utf-8">
+
+  <head>
+		
+    <title>Software-Development | Programming | Information-Security</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Profile and contact site of the software developer, programmer and mathematician Xenia Bogomolec."/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/indexModule.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleSheets/style.css" />
+	  
+  </head>
+	  
+
+  <body ng-controller="indexCtrl" class="index">
+
+  		<div id="header">
+			<a href="index.htm">
+			</a>
+		</div>
+
+  		<div id="linkListBackground"></div>
+	    
+		<div class="linkList">
+		    <div class="link">
+			   <a href="index.htm" title="{{languages.english.links.homeTitle}}" class="activeLink"> 
+			   		{{languages.english.links.home}} 
+			   </a>
+			</div>
+			<div class="link">
+		    	<a href="about.htm?english" title="{{languages.english.links.aboutTitle}}"> 
+		    		{{languages.english.links.about}} 
+		   	    </a>
+		    </div>
+		    <div class="link">
+		   	   <a href="{{languages.english.links.projectLink}}" title=""> 	
+		   	   		{{languages.english.links.projects}}  
+		   	   </a>
+		   	</div>
+		    <div class="link">
+		   	   <a href="impressum.htm" title=""> 	
+		   	   		{{languages.english.links.impressum}}  
+		   	   </a>
+		   	</div>
+		</div>
+
+		<div id="languageButtonBackground">
+			<a href="indexEn.htm">Deutsch</a>
+		</div>
+		
+		<div id="languageButton">
+			<a href="index.htm">Deutsch</a></div>
+			
+			
+		   		
+		<div class="centered">
+
+			<english-abstract></english-abstract>
+
+		</div>
+	
+  </body>
+
+</html>
+
