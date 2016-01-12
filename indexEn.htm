@@ -19,13 +19,14 @@
   <body ng-controller="indexCtrl" class="index">
 
   		<div id="header">
-			<a href="index.htm">
-			</a>
+			<a href="index.htm"></a>
 		</div>
 
   		<div id="linkListBackground"></div>
+
+	    <div id="mobileMenu" ng-click="showMobileMenu()">Menu</div>
 	    
-		<div class="linkList">
+		<div class="linkList" ng-click="showMobileMenu()">
 		    <div class="link">
 			   <a href="index.htm" title="{{languages.english.links.homeTitle}}" class="activeLink"> 
 			   		{{languages.english.links.home}} 
@@ -37,7 +38,12 @@
 		   	    </a>
 		    </div>
 		    <div class="link">
-		   	   <a href="{{languages.english.links.projectLink}}" title=""> 	
+		    	<a href="contact.htm?english" title=""> 
+		    		{{languages.english.links.contact}}  
+		   	    </a>
+		    </div>
+		    <div class="link">
+		   	   <a href="{{languages.english.links.projectLink}}" title="Download PDF" target="blank"> 	
 		   	   		{{languages.english.links.projects}}  
 		   	   </a>
 		   	</div>

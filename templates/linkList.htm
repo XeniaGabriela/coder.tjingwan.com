@@ -1,0 +1,31 @@
+<div id="linkListBackground"></div>
+
+<div id="mobileMenu" ng-click="showMobileMenu()">Menu</div>
+
+<div class="linkList" ng-click="showMobileMenu()">
+    <div class="link">
+  	    <a href="{{homeLink}}" title="{{chosenLanguage.links.homeTitle}}"> 
+  	   		  {{chosenLanguage.links.home}} 
+  	    </a>
+  	</div>
+	  <div class="link">
+    	  <a href="{{aboutLink}}" title="{{chosenLanguage.links.aboutTitle}}"> 
+    		    {{chosenLanguage.links.about}} 
+   	    </a>
+    </div>
+    <div class="link">
+    	  <a href="{{aboutLink}}" title=""> 
+    		    {{chosenLanguage.links.contact}}  
+   	    </a>
+    </div>
+    <div class="link">
+   	    <a href="{{chosenLanguage.links.projectLink}}" title="Download PDF" target="blank"> 	
+   	   		 {{chosenLanguage.links.projects}}  
+   	    </a>
+   	</div>
+   	<div class="link">
+   	    <a href="impressum.htm" title=""> 	
+   	   		  {{chosenLanguage.links.impressum}}  
+   	    </a>
+   	</div>
+</div>

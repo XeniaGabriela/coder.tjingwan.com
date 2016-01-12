@@ -18,14 +18,19 @@ var app = angular.module("indexApp", [])
               "homeTitle": "Startseite",
               "about": "About", 
               "aboutTitle": "über mich",
-              "projects": "Projektliste",
+              "contact": "Kontakt",
+              "projects": "Projektliste (PDF)",
               "projectLink": "pdfs/Projektliste.pdf",
               "impressum": "Impressum"
-            }, 
+          }, 
           "titles": {
               "profiles": "Weitere Profile im Netz",
-              "articles": "Öffentliche Artikel"
-            }
+              "articles": "Veröffentlichte Artikel",
+              "contact": "Kontakt"
+          },
+          "texts": {
+              "githubExplanation": "(meine Industrieprojekte sind dort natürlich nicht öffentlich einsehbar)",
+          }
 
       }
 
@@ -35,14 +40,19 @@ var app = angular.module("indexApp", [])
               "homeTitle": "overview",
               "about": "About", 
               "aboutTitle": "about me",
-              "projects": "Project List",
+              "contact": "Contact",
+              "projects": "Project List (PDF)",
               "projectLink": "pdfs/Projectlist_En.pdf",
               "impressum": "Disclaimer"
             }, 
           "titles": {
               "profiles": "More Profiles",
-              "articles": "Public Articles"
-            }
+              "articles": "Published Articles",
+              "contact": "Contact"
+          },
+          "texts": {
+              "githubExplanation": "(my industry projects are  of course not public)",
+          }
       }
 
       // fade header visibility on scroll
@@ -62,11 +72,15 @@ var app = angular.module("indexApp", [])
           $scope.chosenLanguage = $scope.languages.english;
           $scope.switchLanguage = "Deutsch";
           $scope.homeLink = "indexEn.htm";
+          $scope.aboutLink = "about.htm?english";
+          $scope.contactLink = "contact.htm?english";
       }
       else {
-        $scope.chosenLanguage = $scope.languages.german
+        $scope.chosenLanguage = $scope.languages.german;
         $scope.switchLanguage = "English";
         $scope.homeLink = "index.htm";
+        $scope.aboutLink = "about.htm";
+        $scope.contactLink = "contact.htm";
       }
 
       $scope.changeLanguage = function() {
@@ -85,9 +99,11 @@ var app = angular.module("indexApp", [])
 
       }
 
-      function openWindow (adress, left, top, width, height) {
-        
+      $scope.showMobileMenu = function() {
+          var menu = document.getElementsByClassName("linkList")[0];
+          menu.style.display = (menu.style.display != "block") ? menu.style.display = "block":"none";
       }
+
 
       ///////////////////////////////////////// MULTIPLICATION //////////////////////////////////////
 
@@ -129,32 +145,40 @@ var app = angular.module("indexApp", [])
 // links to sub-pages
 // title of system
 
+// link list
+.directive('linkList', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'templates/linkList.htm'
+    }
+})
+
 // german Abstract
 .directive('germanAbstract', function() {
     return {
         restrict: 'E',
-        templateUrl: 'texts/germanAbstract.htm'
+        templateUrl: 'templates/germanAbstract.htm'
     }
 })
 // german Abstract
-.directive('englishAbstract', function($log) {
+.directive('englishAbstract', function() {
     return {
         restrict: 'E',  
-        templateUrl: 'texts/englishAbstract.htm'
+        templateUrl: 'templates/englishAbstract.htm'
     }
 })
 // german About
 .directive('germanAbout', function() {
     return {
         restrict: 'E',
-        templateUrl: 'texts/germanAbout.htm'
+        templateUrl: 'templates/germanAbout.htm'
     }
 })
 // german About
-.directive('englishAbout', function($log) {
+.directive('englishAbout', function() {
     return {
         restrict: 'E',  
-        templateUrl: 'texts/englishAbout.htm'
+        templateUrl: 'templates/englishAbout.htm'
     }
 })
 ;

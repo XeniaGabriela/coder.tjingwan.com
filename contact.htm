@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="indexApp">
+
+  <head>
+		
+    <title>Coding Services | Xenia Bogomolec </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Why and how I became a mathematician and what I have learned from it."/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/indexModule.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleSheets/style.css" />
+	  
+  </head>
+	  
+
+  <body ng-controller="indexCtrl">
+
+  	<div id="header">
+			<a href="index.htm"></a>
+		</div>
+
+  	<link-list></link-list>
+
+	<div id="languageButtonBackground">
+		<a href="indexEn.htm">{{switchLanguage}}</a>
+	</div>
+			
+	<div id="languageButton" ng-click="changeLanguage()">
+		<a href="">{{switchLanguage}}</a>
+	</div>
+			
+	   		
+	<div class="centered">
+
+		<h1>{{chosenLanguage.titles.contact}}</h1>
+
+		Xenia Bogomolec<br />
+		Engelbosteler Damm 15<br>
+		30167 Hannover<br>
+		Phone: <a class="textLink" href="tel:+491733031816">+49 173 303 18 16</a><br>
+		E-Mail: <a class="textLink" href="mailto:indigomind@gmx.de">indigomind@gmx.de</a><br><br>
+
+				<a class="contactLink" href="https://www.xing.com/profile/Xenia_Bogomolec">
+					Xing
+				</a><br> 
+				<a class="contactLink" href="https://de.linkedin.com/in/xenia-bogomolec-532981a6">
+					LinkedIn
+				</a><br>
+				<a class="contactLink" href="https://plus.google.com/u/0/101718688147481016396">
+					Google+
+				</a><br>
+				
+		</div>
+	</div>
+	
+  </body>
+
+</html>
+
